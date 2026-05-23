@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  # No build command — this is a static site served as-is.
+  # The Netlify build bot scans index.html for forms at deploy time.
+
+# SPA-style fallback example (not needed today; the site is a single page).
+# Uncomment if you ever add client-side routes:
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200

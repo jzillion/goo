@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies (we don't have any yet, but in case future tooling lands)
+node_modules/
+
+# Build / deploy artifacts
+dist/
+build/
+.netlify/
+.cache/
