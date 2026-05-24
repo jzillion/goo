@@ -262,6 +262,12 @@ function SignupForm() {
         })
       });
       if (!res.ok) throw new Error('Network response was not ok');
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'sign_up', {
+          method: 'netlify_form',
+          persona: persona || 'not_specified'
+        });
+      }
       setStatus('success');
     } catch (err) {
       setStatus('error');
@@ -307,7 +313,7 @@ function SignupForm() {
           type="email"
           name="email"
           required
-          placeholder="you@domain.com"
+          placeholder="Email (required)"
           aria-label="Email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -321,7 +327,7 @@ function SignupForm() {
           onChange={(e) => setPersona(e.target.value)}
           disabled={status === 'submitting'}
         >
-          <option value="" disabled>I’m a…</option>
+          <option value="" disabled>I’m a… (required)</option>
           {PERSONA_OPTIONS.map((o) => (
             <option key={o.value} value={o.value}>{o.label}</option>
           ))}
