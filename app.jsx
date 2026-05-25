@@ -159,9 +159,9 @@ function HowItWorks() {
             <h3>Bring what you already have.</h3>
             <p>Links, projects, current focus. No fresh résumé required.</p>
             <div className="visual viz-connect">
-              <div className="chip"><i />github.com/juston</div>
-              <div className="chip"><i />instagram.com/juston</div>
-              <div className="chip"><i />linkedin.com/in/juston</div>
+              <div className="chip"><i />github.com/mira</div>
+              <div className="chip"><i />instagram.com/mira</div>
+              <div className="chip"><i />linkedin.com/in/mira</div>
               <div className="chip" style={{ opacity: .5 }}><i style={{ background: 'transparent', borderStyle: 'dashed' }} />+ add source</div>
             </div>
           </div>

@@ -1,6 +1,6 @@
-// Profile mockup — goo.io/juston
+// Profile mockup — goo.io/mira
 
-const SUMMARY_TEXT = "Juston is building at the intersection of AI automation, startup strategy, and hands-on craftsmanship, connecting systems, people, and ideas into practical execution.";
+const SUMMARY_TEXT = "Mira is building at the intersection of AI-driven biotechnology, computational systems, and human-centered design, translating complex science into practical tools that improve health and longevity.";
 
 function TypedSummary() {
   const [shown, setShown] = React.useState(SUMMARY_TEXT.length);
@@ -49,23 +49,23 @@ function TypedSummary() {
 }
 
 const SUGGESTIONS = [
-  "What is Juston building?",
-  "What topics does he focus on?",
-  "What is he known for?",
+  "What is Mira building?",
+  "What is she known for?",
+  "How does she think about AI and biology?",
   "How can we collaborate?",
 ];
 
 // Pre-canned responses so the profile feels alive without burning Claude calls
 // every page-load. Actual "Ask Goo" calls Claude.
 const PRECOOKED = {
-  "What is Juston building?":
-    "Currently leading Adler, an AI-native operations platform. Also active on the Jefferson Gold Project and a few smaller systems experiments around local AI workflows.",
-  "What topics does he focus on?":
-    "AI automation, startup operating systems, and hands-on craft: mining, woodworking, and the practical edges of running real-world projects.",
-  "What is he known for?":
-    "Translating between operators and builders. He turns scattered context into clear systems, then ships them.",
+  "What is Mira building?":
+    "She's building Aurelium Bio, an AI-enabled biotech platform focused on adaptive therapeutics. Synapse Atlas, her open mapping of biological intelligence, runs in parallel.",
+  "What is she known for?":
+    "Translating dense biotech research into systems people can actually use. Mira is known in AI-bio circles for her work on biological mapping and her writing on consciousness.",
+  "How does she think about AI and biology?":
+    "As two halves of the same system. She treats AI as a tool for sensing and mapping biology, not for replacing it, and believes the most interesting work is at the interface of the two.",
   "How can we collaborate?":
-    "Reach out via the contact link below. He's most interested in conversations about AI-native operations, identity, and ambitious infrastructure projects.",
+    "Mira works closely with researchers, designers, and operators across biotech and AI. A short note about what you're working on is the best first step.",
 };
 
 function ProfileAsk() {
@@ -92,9 +92,9 @@ function ProfileAsk() {
 
     try {
       const reply = await window.claude.complete(
-        `You are Goo, an AI-native identity assistant answering as Juston Berg's living profile.
-Juston Berg: founder, AI operator, builder. Currently building Adler (AI-native ops platform), exploring AI-native identity graphs, working on the Jefferson Gold Project, learning local AI workflows. Interests: AI automation, startups, systems, mining, woodworking, Reno.
-Answer briefly (2–3 sentences max), in a calm, intelligent tone. Never break the fourth wall. If you don't know, say what you'd ask Juston directly.
+        `You are Goo, an AI-native identity assistant answering as Mira Vale's living profile.
+Mira Vale: founder, biotech operator, systems thinker. Currently building Aurelium Bio (AI-enabled biotech platform), exploring AI-native biological mapping systems, working on an adaptive therapeutics platform, learning philosophy of consciousness and decentralized AI systems. Interests: biotech, AI, longevity, philosophy, neuroscience, San Francisco.
+Answer briefly (2–3 sentences max), in a calm, intelligent tone. Never break the fourth wall. If you don't know, say what you'd ask Mira directly.
 
 Question: ${text}`
       );
@@ -118,7 +118,7 @@ Question: ${text}`
           value={q}
           onChange={(e) => setQ(e.target.value)}
           onKeyDown={(e) => { if (e.key === 'Enter') submit(); }}
-          placeholder="Ask Goo about Juston…"
+          placeholder="Ask Goo about Mira…"
         />
         <span className="kbd">↵</span>
       </div>
@@ -148,7 +148,7 @@ function ProfileMockup() {
         <div className="dots"><i /><i /><i /></div>
         <div className="url">
           <span className="lock">⌁ </span>
-          goo.io/<b>juston</b>
+          goo.io/<b>mira</b>
         </div>
         <div style={{ width: 36 }} />
       </div>
@@ -158,12 +158,12 @@ function ProfileMockup() {
           <img
             className="pf-avatar"
             src="avatar.jpg"
-            alt="Juston Berg"
+            alt="Mira Vale"
             style={{ objectFit: 'cover' }}
           />
           <div>
-            <div className="pf-name">Juston Berg</div>
-            <div className="pf-desc">Founder · AI Operator · Builder</div>
+            <div className="pf-name">Mira Vale</div>
+            <div className="pf-desc">Founder · Biotech Operator · Systems Thinker</div>
             <div className="pf-live"><i />Live · updated 2h ago</div>
           </div>
         </div>
@@ -176,22 +176,22 @@ function ProfileMockup() {
         <div>
           <div className="pf-section-label">Currently</div>
           <div className="pf-current">
-            <div className="row"><span className="k">Building</span><span className="v">Adler</span></div>
-            <div className="row"><span className="k">Exploring</span><span className="v">AI-native identity graphs</span></div>
-            <div className="row"><span className="k">Working on</span><span className="v">Jefferson Gold Project</span></div>
-            <div className="row"><span className="k">Learning</span><span className="v">Local AI workflows</span></div>
+            <div className="row"><span className="k">Building</span><span className="v">Aurelium Bio</span></div>
+            <div className="row"><span className="k">Exploring</span><span className="v">AI-native biological mapping systems</span></div>
+            <div className="row"><span className="k">Working on</span><span className="v">Adaptive therapeutics platform</span></div>
+            <div className="row"><span className="k">Learning</span><span className="v">Philosophy of consciousness & decentralized AI systems</span></div>
           </div>
         </div>
 
         <div>
           <div className="pf-section-label">Identity</div>
           <div className="pf-tags">
-            <span className="pf-tag accent">AI Automation</span>
-            <span className="pf-tag">Startups</span>
-            <span className="pf-tag">Systems</span>
-            <span className="pf-tag">Mining</span>
-            <span className="pf-tag">Woodworking</span>
-            <span className="pf-tag">Reno</span>
+            <span className="pf-tag accent">Biotech</span>
+            <span className="pf-tag">AI</span>
+            <span className="pf-tag">Longevity</span>
+            <span className="pf-tag">Philosophy</span>
+            <span className="pf-tag">Neuroscience</span>
+            <span className="pf-tag">San Francisco</span>
           </div>
         </div>
 
@@ -199,18 +199,18 @@ function ProfileMockup() {
           <div className="pf-section-label">Projects</div>
           <div className="pf-links">
             <a className="pf-link" href="#">
-              <span>Adler</span>
-              <span className="meta">AI ops platform</span>
+              <span>Aurelium Bio</span>
+              <span className="meta">AI-enabled biotech platform</span>
               <span className="arrow">→</span>
             </a>
             <a className="pf-link" href="#">
-              <span>Jefferson Gold</span>
-              <span className="meta">Mining · 2024–</span>
+              <span>Synapse Atlas</span>
+              <span className="meta">Biological intelligence mapping · 2025–</span>
               <span className="arrow">→</span>
             </a>
             <a className="pf-link" href="#">
               <span>Field Notes</span>
-              <span className="meta">Writing</span>
+              <span className="meta">Writing & research</span>
               <span className="arrow">→</span>
             </a>
           </div>

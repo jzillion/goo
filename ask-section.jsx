@@ -2,10 +2,10 @@
 // scripted, looping, slow
 
 const CONVO = [
-  { who: 'you',  text: "What is Juston working on right now?" },
-  { who: 'goo',  text: "He's leading Adler, an AI-native operations platform, while exploring identity graphs as a side thread. Mining at Jefferson Gold continues in parallel." },
-  { who: 'you',  text: "Is he the right person to talk to about local AI workflows?" },
-  { who: 'goo',  text: "Yes. He's been deep in local model orchestration for the last few months and writes about it publicly. A short note over email is the best first step." },
+  { who: 'you',  text: "What is Mira working on right now?" },
+  { who: 'goo',  text: "She's building Aurelium Bio, an AI-enabled biotech platform, while developing the Synapse Atlas for mapping biological intelligence. Philosophy of consciousness keeps surfacing in her work." },
+  { who: 'you',  text: "Is she the right person to talk to about decentralized AI systems?" },
+  { who: 'goo',  text: "Yes. She's been deep in decentralized AI architecture through the Synapse Atlas project and writes about it publicly. A short note over email is the best first step." },
 ];
 
 function AskConversation() {
